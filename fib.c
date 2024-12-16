@@ -3,25 +3,25 @@
 //write in C fibonnaci recursively and write it iteratively 
 //then accept the command line argument read the file then calculate the value to the Nth fibbnoaci
 
-int fibo_iterative(int f) {
-   if (f <= 1){
-    return f;
+int fibo_iterative(int fib) {
+   if (fib <= 1){
+    return fib;
    } 
-   int a = 0;
-   int b = 1;
-   for (int i = 2; i < f; i++){
-      int origin = a;
-      a = b;
-      b = origin + b;
+   int a_val = 0;
+   int b_val = 1;
+   for (int i = 2; i < fib; i++){
+      int origin = a_val;
+      a_val = b_val;
+      b_val = origin + b_val;
    }
-    return b;
+    return b_val;
 }
 
-int fibo_recursive(int f){
-    if (f <= 1){
-        return f;
+int fibo_recursive(int fib){
+    if (fib <= 1){
+        return fib;
     }
-    return fibo_recursive(f-1) + fibo_recursive(f-2);
+    return fibo_recursive(fib-1) + fibo_recursive(fib-2);
 }
 
 
